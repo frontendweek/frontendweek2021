@@ -1,7 +1,19 @@
-import '../styles/globals.css'
+import t from 'prop-types'
+import { ThemeProvider } from 'styled-components'
+import { theme, GlobalStyle, MediaContextProvider } from 'ui'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App ({ Component, pageProps }) {
+  return (
+    <MediaContextProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </MediaContextProvider>
+  )
 }
 
-export default MyApp
+App.propTypes = {
+  Component: t.elementType.isRequired,
+  pageProps: t.object,
+}
