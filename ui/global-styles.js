@@ -29,8 +29,8 @@ export const GlobalStyle = createGlobalStyle`
     cursor: default;
     font-family: 'Lato', sans-serif;
     font-variant-ligatures: none;
-    color: #000;
-    background: #fff;
+    color: ${({ theme }) => theme.colors.text};
+    background: ${({ theme }) => theme.colors.background};
   }
 
   input,

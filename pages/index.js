@@ -1,9 +1,18 @@
-import { HeadComponent } from 'ui'
+import {
+  HeadComponent,
+  Header,
+  Container,
+  Hero,
+} from 'ui'
 
 const Home = () => {
   return (
     <>
       <HeadComponent />
+      <Header />
+      <Container>
+        <Hero />
+      </Container>
     </>
   )
 }
