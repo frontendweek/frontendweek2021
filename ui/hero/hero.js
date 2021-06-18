@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-import { media, Button } from 'ui'
+import { media, Container, Button, GradientText } from 'ui'
 
 const makeAnimation = delay => ({
   initial: 'hidden',
@@ -21,15 +21,17 @@ const makeAnimation = delay => ({
 })
 
 export const Hero = () => (
-  <Wrapper>
-    <MotionWrapper {...makeAnimation(0.6)}>
-      <Image src='/hero.svg' width={477} height={170} />
-    </MotionWrapper>
-    <Text {...makeAnimation(0.7)}>Edição Online <span>•</span> de 12 a 16 de Julho de 2021</Text>
-    <MotionWrapper {...makeAnimation(0.8)}>
-      <Button>Ver programação</Button>
-    </MotionWrapper>
-  </Wrapper>
+  <Container>
+    <Wrapper>
+      <MotionWrapper {...makeAnimation(0.6)}>
+        <Image src='/hero.svg' width={477} height={170} />
+      </MotionWrapper>
+      <Text {...makeAnimation(0.7)}>Edição Online <GradientText>•</GradientText> de 12 a 16 de Julho de 2021</Text>
+      <MotionWrapper {...makeAnimation(0.8)}>
+        <Button>Ver programação</Button>
+      </MotionWrapper>
+    </Wrapper>
+  </Container>
 )
 
 const Wrapper = styled.section`
@@ -52,12 +54,8 @@ const Text = styled(motion.p)`
   font-weight: 500;
   line-height: 1.3;
   margin: 0 0 5.6rem;
-
-  > span {
-    /* font-size: 3rem; */
-    background: ${({ theme }) => `-webkit-linear-gradient(${theme.colors.primary}, ${theme.colors.secondary})`};
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 `

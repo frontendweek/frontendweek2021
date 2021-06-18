@@ -1,8 +1,9 @@
 import {
   HeadComponent,
   Header,
-  Container,
   Hero,
+  Schedule,
+  Footer,
 } from 'ui'
 
 const Home = () => {
@@ -10,9 +11,9 @@ const Home = () => {
     <>
       <HeadComponent />
       <Header />
-      <Container>
-        <Hero />
-      </Container>
+      <Hero />
+      <Schedule />
+      <Footer />
     </>
   )
 }
