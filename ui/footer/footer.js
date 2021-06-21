@@ -16,19 +16,28 @@ export const Footer = () => {
         <div>
           <SectionTitle>Apoio</SectionTitle>
           <Supporters>
-            <a href='https://github.com/frontendbr'>
-              <img src='/frontendbr-logo.svg' width={217} height={99} alt="Front-endBR"/>
-            </a>
             <a href='https://portolab.com.br'>
-              <img src='/portolab-logo.svg' width={217} height={99} alt="Portolab" />
+              <img src='/portolab-logo.svg' width={190} height={99} alt="Portolab" />
+            </a>
+            <a href='https://github.com/frontendbr'>
+              <img src='/frontendbr-logo.svg' width={190} height={99} alt="Front-endBR"/>
             </a>
           </Supporters>
         </div>
         <div>
           <SectionTitle>Entre em contato</SectionTitle>
           <LinkList>
-            <li><SectionLink href='mailto:frontendweek@gmail.com'>frontendweek@gmail.com</SectionLink></li>
+            <li><SectionLink href='mailto:frontendweekbr@gmail.com'>frontendweekbr@gmail.com</SectionLink></li>
             <li><SectionLink href='https://twitter.com/frontendweek'>@frontendweek</SectionLink></li>
+          </LinkList>
+        </div>
+        <div>
+          <SectionTitle>Edições anteriores</SectionTitle>
+          <LinkList>
+            <li><SectionLink href='http://2020.frontendweek.com.br'>2020</SectionLink></li>
+            <li><SectionLink href='http://2019.frontendweek.com.br'>2019</SectionLink></li>
+            <li><SectionLink href='http://2018.frontendweek.com.br'>2018</SectionLink></li>
+            <li><SectionLink href='http://2017.frontendweek.com.br'>2017</SectionLink></li>
           </LinkList>
         </div>
         <div>
@@ -48,7 +57,7 @@ export const Footer = () => {
 const Wrapper = styled.footer`
   display: grid;
   gap: 6rem;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr, 1fr;
   justify-content: space-between;
   padding: 10.2rem 1.5rem;
   width: 100%;
@@ -57,7 +66,7 @@ const Wrapper = styled.footer`
   background-color: ${({ theme }) => theme.colors.background};
 
   ${media.greaterThan('md')`
-    grid-template-columns: 2fr 1.5fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 3rem;
   `}
