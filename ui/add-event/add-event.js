@@ -5,7 +5,7 @@ import { Button } from 'ui'
 export const AddEvent = () => (
   <Wrapper>
     <Text>Você organiza algum <b>evento</b> de front-end e deseja adicionar nesta lista?</Text>
-    <Button>Adicionar evento</Button>
+    <Button as='a' href='https://github.com/frontendweek/frontendweek2021'>Adicionar evento</Button>
   </Wrapper>
 )
 

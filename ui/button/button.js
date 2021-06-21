@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { lighten } from 'polished'
 
 export const Button = styled.button`
+  text-decoration: none;
+  display: inline-block;
   border: none;
   cursor: pointer;
   font-size: 1.8rem;

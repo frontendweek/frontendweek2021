@@ -27,7 +27,7 @@ export const Hero = () => (
       </MotionWrapper>
       <Text {...makeAnimation(0.7)}>Edição Online <GradientText>•</GradientText> de 12 a 16 de Julho de 2021</Text>
       <MotionWrapper {...makeAnimation(0.8)}>
-        <Button>Ver programação</Button>
+        <Button as='a' href="#events">Ver programação</Button>
       </MotionWrapper>
     </Wrapper>
   </Container>

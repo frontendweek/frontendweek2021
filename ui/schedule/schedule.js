@@ -7,7 +7,7 @@ import events from '../../events.json'
 export const Schedule = () => {
   return (
     <Wrapper>
-      <Container>
+      <Container id="events">
         <Title>Programação</Title>
         <Timeline events={eventList} />
         <AddEvent />
