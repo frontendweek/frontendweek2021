@@ -9,12 +9,12 @@ const HeadComponent = () => {
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 
       <meta itemProp="name" content="Front-end Week 2021 &bull; 8ª Edição" />
-      <meta itemProp="image" content="/og-600x600.jpg" />
+      <meta itemProp="image" content="/og-600x600.png" />
       <meta itemProp="url" content="http://frontendweek.com.br/" />
       <meta itemProp="description" content="Confira a programação da 8ª edição da Front-End Week." />
 
       <meta property="og:title" content="Front-end Week 2021 &bull; 8ª Edição" />
-      <meta property="og:image" content="/og-240x240.jpg" />
+      <meta property="og:image" content="/og-240x240.png" />
       <meta property="og:url" content="http://frontendweek.com.br/" />
       <meta property="og:type" content="website" />
       <meta property="og:description" content="Confira a programação da 8ª edição da Front-End Week." />
