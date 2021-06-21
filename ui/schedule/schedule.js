@@ -14,7 +14,7 @@ export const Schedule = () => (
 const Wrapper = styled.section`
   background-color: #121212;
   padding: 18rem 0;
-  clip-path: polygon(0% 5rem, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 5rem, 100% 0%, 100% 97%, 0% 100%);
 `
 
 const Title = styled.h2`

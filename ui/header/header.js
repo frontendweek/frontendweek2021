@@ -53,7 +53,7 @@ const Wrapper = styled(motion.header)`
 
 const Text = styled.p`
   text-decoration: none;
-  font-size: 2.4rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 600;
   transition: color .25s ease;
   color: ${({ theme }) => theme.colors.text};

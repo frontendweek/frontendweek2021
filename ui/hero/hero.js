@@ -50,7 +50,7 @@ const Wrapper = styled.section`
 const MotionWrapper = styled(motion.div)``
 
 const Text = styled(motion.p)`
-  font-size: 2.4rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 500;
   line-height: 1.3;
   margin: 0 0 5.6rem;
@@ -58,4 +58,9 @@ const Text = styled(motion.p)`
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  ${media.lessThan('sm')`
+    flex-direction: column;
+    gap: 0;
+  `}
 `
