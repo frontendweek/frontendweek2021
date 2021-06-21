@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styled from 'styled-components'
 import { rgba } from 'polished'
 
@@ -9,8 +8,12 @@ export const Footer = () => (
     <div>
       <SectionTitle>Apoio</SectionTitle>
       <Supporters>
-        <Image src='/frontendbr-logo.png' width={217} height={99} />
-        <Image src='/portolab-logo.svg' width={217} height={99} />
+        <a href='https://github.com/frontendbr'>
+          <img src='/frontendbr-logo.svg' width={217} height={99} alt="Front-endBR"/>
+        </a>
+        <a href='https://portolab.com.br'>
+          <img src='/portolab-logo.svg' width={217} height={99} alt="Portolab" />
+        </a>
       </Supporters>
     </div>
     <div>
@@ -84,5 +87,10 @@ const Supporters = styled.div`
 
   * {
     align-self: self-start;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
   }
 `

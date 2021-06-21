@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
@@ -24,7 +23,7 @@ export const Hero = () => (
   <Container>
     <Wrapper>
       <MotionWrapper {...makeAnimation(0.6)}>
-        <Image src='/hero.svg' width={477} height={170} />
+        <HeroLogo src='/hero.svg' width={477} height={170} alt="Front-end Week 2021" />
       </MotionWrapper>
       <Text {...makeAnimation(0.7)}>Edição Online <GradientText>•</GradientText> de 12 a 16 de Julho de 2021</Text>
       <MotionWrapper {...makeAnimation(0.8)}>
@@ -63,4 +62,10 @@ const Text = styled(motion.p)`
     flex-direction: column;
     gap: 0;
   `}
+`
+
+const HeroLogo = styled.img`
+  display: block;
+  width: 100%;
+  max-width: 47.7rem;
 `
