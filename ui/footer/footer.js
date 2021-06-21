@@ -1,36 +1,49 @@
 import styled from 'styled-components'
+import { useState } from 'react'
 import { rgba } from 'polished'
 
-import { media } from 'ui'
+import { CodeOfConduct, media, Modal } from 'ui'
 
-export const Footer = () => (
-  <Wrapper>
-    <div>
-      <SectionTitle>Apoio</SectionTitle>
-      <Supporters>
-        <a href='https://github.com/frontendbr'>
-          <img src='/frontendbr-logo.svg' width={217} height={99} alt="Front-endBR"/>
-        </a>
-        <a href='https://portolab.com.br'>
-          <img src='/portolab-logo.svg' width={217} height={99} alt="Portolab" />
-        </a>
-      </Supporters>
-    </div>
-    <div>
-      <SectionTitle>Entre em contato</SectionTitle>
-      <LinkList>
-        <li><SectionLink href='mailto:frontendweek@gmail.com'>frontendweek@gmail.com</SectionLink></li>
-        <li><SectionLink href='https://twitter.com/frontendweek'>@frontendweek</SectionLink></li>
-      </LinkList>
-    </div>
-    <div>
-      <SectionTitle>Legal</SectionTitle>
-      <LinkList>
-        <li><SectionLink href='#'>Código de conduta</SectionLink></li>
-      </LinkList>
-    </div>
-  </Wrapper>
-)
+export const Footer = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const openModal = () => setIsOpen(true)
+  const closeModal = () => setIsOpen(false)
+
+  return (
+    <>
+      <Wrapper>
+        <div>
+          <SectionTitle>Apoio</SectionTitle>
+          <Supporters>
+            <a href='https://github.com/frontendbr'>
+              <img src='/frontendbr-logo.svg' width={217} height={99} alt="Front-endBR"/>
+            </a>
+            <a href='https://portolab.com.br'>
+              <img src='/portolab-logo.svg' width={217} height={99} alt="Portolab" />
+            </a>
+          </Supporters>
+        </div>
+        <div>
+          <SectionTitle>Entre em contato</SectionTitle>
+          <LinkList>
+            <li><SectionLink href='mailto:frontendweek@gmail.com'>frontendweek@gmail.com</SectionLink></li>
+            <li><SectionLink href='https://twitter.com/frontendweek'>@frontendweek</SectionLink></li>
+          </LinkList>
+        </div>
+        <div>
+          <SectionTitle>Legal</SectionTitle>
+          <LinkList>
+            <li><SectionLink as='button' onClick={openModal}>Código de conduta</SectionLink></li>
+          </LinkList>
+        </div>
+      </Wrapper>
+      <Modal isOpen={isOpen} handleClose={closeModal}>
+        <CodeOfConduct />
+      </Modal>
+    </>
+  )
+}
 
 const Wrapper = styled.footer`
   display: grid;
@@ -67,11 +80,14 @@ const LinkList = styled.ul`
 `
 
 const SectionLink = styled.a`
+  appearance: none;
+  background-color: transparent;
+  border: none;
   display: inline-block;
   font-size: 1.8rem;
   color: ${({ theme }) => theme.colors.text};
   text-decoration: none;
-  padding-bottom: 0.8rem;
+  padding: 0 0 0.8rem;
   border-bottom: 1px dashed ${({ theme }) => rgba(theme.colors.text, 0.3)};
   transition: border-bottom-color .25s ease;
 
