@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Container, Timeline } from 'ui'
+import { Container, Timeline, AddEvent } from 'ui'
 
 import events from '../../events.json'
 
@@ -10,6 +10,7 @@ export const Schedule = () => {
       <Container>
         <Title>Programação</Title>
         <Timeline events={eventList} />
+        <AddEvent />
       </Container>
     </Wrapper>
   )

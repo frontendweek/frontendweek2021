@@ -13,6 +13,7 @@ export const Button = styled.button`
   transition: background-color .25s ease;
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.text};
+  text-transform: uppercase;
 
   &:focus,
   &:hover {
