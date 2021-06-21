@@ -25,7 +25,7 @@ export const Hero = () => (
       <MotionWrapper {...makeAnimation(0.6)}>
         <HeroLogo src='/hero.svg' width={477} height={170} alt="Front-end Week 2021" />
       </MotionWrapper>
-      <Text {...makeAnimation(0.7)}>Edição Online <GradientText>•</GradientText> de 12 a 16 de Julho de 2021</Text>
+      <Text {...makeAnimation(0.7)}>Edição Online <GradientText>•</GradientText> de 12 a 17 de Julho de 2021</Text>
       <MotionWrapper {...makeAnimation(0.8)}>
         <Button as='a' href="#events">Ver programação</Button>
       </MotionWrapper>
