@@ -1,67 +1,13 @@
 import styled from 'styled-components'
+import t from 'prop-types'
 
 import { Card, media } from 'ui'
 
-const tempData = [
-  {
-    id: 11,
-    title: 'Meetup Front-end SP',
-    date: '12/07',
-    time: '20h',
-    tags: [
-      {
-        name: 'Twitter',
-        url: 'https://twitter.com',
-      },
-      {
-        name: 'Youtube',
-        url: 'https://youtube.com',
-      },
-    ],
-  },
-  {
-    id: 12,
-    title: 'Meetup HTML',
-    date: '13/07',
-    time: '20h',
-    tags: [
-      {
-        name: 'Twitter',
-        url: 'https://twitter.com',
-      },
-    ],
-  },
-  {
-    id: 13,
-    title: 'Meetup HTML',
-    date: '14/07',
-    time: '20h',
-    tags: [
-      {
-        name: 'Twitter',
-        url: 'https://twitter.com',
-      },
-    ],
-  },
-  {
-    id: 14,
-    title: 'Meetup HTML',
-    date: '15/07',
-    time: '20h',
-    tags: [
-      {
-        name: 'Twitter',
-        url: 'https://twitter.com',
-      },
-    ],
-  },
-]
-
-export const Timeline = () => (
+export const Timeline = ({ events }) => (
   <Wrapper>
-    {tempData.map(item => (
+    {events.map(item => (
       <Item key={item.id}>
-        <EventDate>{item.date}</EventDate>
+        <EventDate>{item.eventDate}</EventDate>
         <CardWrapper>
           <Card {...item} />
         </CardWrapper>
@@ -69,6 +15,20 @@ export const Timeline = () => (
     ))}
   </Wrapper>
 )
+
+export const EventProps = t.shape({
+  eventName: t.string.isRequired,
+  eventDate: t.string.isRequired,
+  eventHour: t.string.isRequired,
+  eventLinks: t.arrayOf(t.shape({
+    name: t.string,
+    url: t.string,
+  })),
+})
+
+Timeline.propTypes = {
+  events: t.arrayOf(EventProps),
+}
 
 const Wrapper = styled.div``
 

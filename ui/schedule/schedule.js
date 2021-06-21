@@ -2,14 +2,27 @@ import styled from 'styled-components'
 
 import { Container, Timeline } from 'ui'
 
-export const Schedule = () => (
-  <Wrapper>
-    <Container>
-      <Title>Programação</Title>
-      <Timeline />
-    </Container>
-  </Wrapper>
-)
+import events from '../../events.json'
+
+export const Schedule = () => {
+  return (
+    <Wrapper>
+      <Container>
+        <Title>Programação</Title>
+        <Timeline events={eventList} />
+      </Container>
+    </Wrapper>
+  )
+}
+
+const addId = (items) => items.map(item => ({
+  id: createId(),
+  ...item,
+}))
+
+const createId = () => '_' + Math.random().toString(36).substr(2, 9)
+
+const eventList = addId(events.events)
 
 const Wrapper = styled.section`
   background-color: #121212;

@@ -2,6 +2,10 @@
   "name": "front-end-week",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Vitor Mendrone",
+    "email": "vitormendrone@gmail.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

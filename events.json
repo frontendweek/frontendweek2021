@@ -1,0 +1,19 @@
+{
+  "events": [
+    {
+      "eventName": "Meetup exemplo",
+      "eventDate": "12/07",
+      "eventHour": "20h",
+      "eventLinks": [
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://youtube.com"
+        }
+      ]
+    }
+  ]
+}

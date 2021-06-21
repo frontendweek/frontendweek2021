@@ -1,30 +1,21 @@
 import styled from 'styled-components'
-import t from 'prop-types'
 import { rgba } from 'polished'
 
-import { Tag, GradientText } from 'ui'
+import { Tag, GradientText, EventProps } from 'ui'
 
-export const Card = ({ title, date, time, tags }) => (
+export const Card = ({ eventName, eventDate, eventHour, eventLinks }) => (
   <Wrapper>
-    <Title>Meetup Front-end SP</Title>
-    <Description>{date} <GradientText>•</GradientText> {time}</Description>
+    <Title>{eventName}</Title>
+    <Description>{eventDate} <GradientText>•</GradientText> {eventHour}</Description>
     <TagContainer>
-      {tags.map(({ name, url }, index) => (
+      {eventLinks.map(({ name, url }, index) => (
         <Tag name={name} url={url} key={`${name}-${index}`} />
       ))}
     </TagContainer>
   </Wrapper>
 )
 
-Card.propTypes = {
-  title: t.string,
-  date: t.string,
-  time: t.string,
-  tags: t.arrayOf(t.shape({
-    name: t.string,
-    url: t.string,
-  })),
-}
+Card.propTypes = EventProps
 
 const Wrapper = styled.article`
   padding: 4rem 4.6rem 5rem;
