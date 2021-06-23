@@ -5,8 +5,8 @@ import { Card, media } from 'ui'
 
 export const Timeline = ({ events }) => (
   <Wrapper>
-    {events.map(item => (
-      <Item key={item.id}>
+    {events.map((item, index) => (
+      <Item key={index}>
         <EventDate>{item.eventDate}</EventDate>
         <CardWrapper>
           <Card {...item} />
@@ -17,6 +17,7 @@ export const Timeline = ({ events }) => (
 )
 
 export const EventProps = t.shape({
+  backgroundId: t.number.isRequired,
   eventName: t.string.isRequired,
   eventDate: t.string.isRequired,
   eventHour: t.string.isRequired,

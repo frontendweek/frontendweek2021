@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { splitEvery, pipe, map, addIndex, assoc, flatten } from 'ramda'
 import { Container, Timeline, AddEvent } from 'ui'
 
 import events from '../../events.json'
@@ -16,14 +16,16 @@ export const Schedule = () => {
   )
 }
 
-const addId = (items) => items.map(item => ({
-  id: createId(),
-  ...item,
-}))
+const mapI = addIndex(map)
 
-const createId = () => '_' + Math.random().toString(36).substr(2, 9)
+const addBackgroundId = (events) =>
+  pipe(
+    splitEvery(4),
+    map(mapI((event, id) => assoc('backgroundId', id, event))),
+    flatten
+  )(events)
 
-const eventList = addId(events.events)
+const eventList = addBackgroundId(events.events)
 
 const Wrapper = styled.section`
   background-color: #121212;
