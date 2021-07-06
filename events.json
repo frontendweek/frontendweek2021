@@ -1,6 +1,25 @@
 {
   "events": [
     {
+      "eventName": "GitHub Copilot: da pra criar uma app React 100% com IA? feat. DevSoutinho",
+      "eventDate": "13/07",
+      "eventHour": "19h",
+      "eventLinks": [
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/DevSoutinho"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/omariosouto"
+        },
+        {
+          "name": "Website",
+          "url": "https://mariosouto.com/"
+        }
+      ]
+    },
+    {
       "eventName": "Live Dev na Estrada",
       "eventDate": "14/07",
       "eventHour": "19h",
