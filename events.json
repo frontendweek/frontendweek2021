@@ -6,6 +6,10 @@
       "eventHour": "19h",
       "eventLinks": [
         {
+          "name": "Gravação da Live",
+          "url": "https://www.youtube.com/watch?v=K-32h6oSgpg"
+        },
+        {
           "name": "Youtube",
           "url": "https://www.youtube.com/DevSoutinho"
         },
