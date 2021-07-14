@@ -29,6 +29,10 @@
       "eventHour": "19h",
       "eventLinks": [
         {
+          "name": "Live",
+          "url": "https://www.youtube.com/watch?v=x0l5JIyANOA"
+        },
+        {
           "name": "Youtube",
           "url": "https://www.youtube.com/channel/UCtIygB7LtILSFWR0kxtZC-A"
         },
