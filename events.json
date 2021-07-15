@@ -56,6 +56,10 @@
       "eventHour": "19h",
       "eventLinks": [
         {
+          "name": "Live",
+          "url": "https://www.youtube.com/watch?v=U67-QgYTVKo&ab_channel=DevsCansados"
+        },
+        {
           "name": "Youtube",
           "url": "https://www.youtube.com/channel/UChrKSGEMw5CudExw1Z6630Q"
         },
