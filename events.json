@@ -83,6 +83,10 @@
       "eventHour": "19h",
       "eventLinks": [
         {
+          "name": "Live",
+          "url": "https://www.youtube.com/watch?v=08zgbfFVWQw"
+        },
+        {
           "name": "Twitter",
           "url": "https://twitter.com/frontendbr"
         },
