@@ -83,7 +83,7 @@
       "eventHour": "19h",
       "eventLinks": [
         {
-          "name": "Live",
+          "name": "Gravação da Live",
           "url": "https://www.youtube.com/watch?v=08zgbfFVWQw"
         },
         {
@@ -105,6 +105,10 @@
       "eventDate": "17/07",
       "eventHour": "9h",
       "eventLinks": [
+        {
+          "name": "Gravação da Live",
+          "url": "https://www.youtube.com/watch?v=lnSxFnYk6UA"
+        },
         {
           "name": "Youtube",
           "url": "https://frontinsampa.com.br/youtube"
